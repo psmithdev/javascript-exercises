@@ -1,9 +1,12 @@
 const removeFromArray = function (empty, removeItem) {
-  let emptyArray = [];
-  return (emptyArray += empty.splice(0, removeItem));
+  const index = empty.indexOf(removeItem);
+  if (index !== -1) {
+    empty.splice(index, 1);
+  }
+  return empty;
 };
 
-removeFromArray();
+removeFromArray([1, 2, 3, 4], 3);
 
 // Do not edit below this line
 module.exports = removeFromArray;
