@@ -1,6 +1,9 @@
-const removeFromArray = function (array, numbers) {
-  return array.slice(0, numbers).concat(array.slice(numbers + 1));
+const removeFromArray = function (empty, removeItem) {
+  let emptyArray = [];
+  return (emptyArray += empty.splice(0, removeItem));
 };
+
+removeFromArray();
 
 // Do not edit below this line
 module.exports = removeFromArray;
